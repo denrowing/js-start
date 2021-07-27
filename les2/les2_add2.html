@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /* зробити масив з 10 чисел [2,17,13,6,22,31,45,66,100,-18] та:
+1. перебрати його циклом while */
+
+ /* let arr = [2,17,13,6,22,31,45,66,100,-18] */
+     /* let i = 0;
+        while(i < arr.length) {
+            if (arr[i] % 2 == 0) {
+               document.write(`${arr[i]}<br/>`)
+            }
+           i++;
+        } */
+
+ /* 2. перебрати його циклом for */
+
+       /* for (let elem of arr) {
+            console.log(elem)
+            document.write(`${elem}<br/>`)
+          }  */
+
+
+/* 3. перебрати циклом while та вивести  числа тільки з непарним індексом */
+
+     /* let i = 0;
+        while(i < arr.length) {
+            if (i % 2 !== 0) {
+                document.write(`${arr[i]}<br/>`)
+                console.log(arr[i])
+            }
+            i++;
+        } */
+
+/* 4. перебрати циклом for та вивести  числа тільки з непарним індексом */
+
+     /* for (let i = 0; i < arr.length; i++) {
+             if (i % 2 !== 0) {
+                console.log(arr[i])
+                document.write(`${arr[i]}<br/>`)
+             }
+        } */
+
+/* 5. перебрати циклом while та вивести  числа тільки парні  значення */
+     /* let i = 0;
+        while(i < arr.length) {
+            if (arr[i] % 2 == 0) {
+                document.write(`${arr[i]}<br/>`)
+                console.log(arr[i])
+            }
+            i++;
+        } */
+
+/* 6. перебрати циклом for та вивести  числа тільки парні  значення */
+
+     /* for (let elem of arr) {
+             if(elem % 2 == 0) {
+                 console.log(elem)
+                 document.write(`${elem}<br/>`)
+             }
+        } */
+
+/* 7. замінити кожне число кратне 3 на слово "okten" */
+
+        /* for (let i = 0; i < arr.length; i++) {
+            if(arr[i] % 3 == 0) {
+                arr[i] = 'okten'
+            }
+        }
+        console.log(arr) */
+
+/*   8. вивести масив в зворотньому порядку. */
+
+        /* console.log(arr.reverse()) */
+
+
+/* 9. всі попередні завдання (окрім 8), але в зворотньому циклі (с заду на перед) */
+
+ /* 9.1 перебрати массив циклом while */
+
+     /* let i = arr.length - 1;
+        while(i >= 0) {
+            if (arr[i] % 2 == 0) {
+                document.write(`${arr[i]}<br/>`)
+            }
+            i--;
+        } */
+
+ /* 9.2. перебрати його циклом for */
+
+     /* for (let i = arr.length - 1; i >= 0; i--) {
+                console.log(arr[i])
+                document.write(`${arr[i]}<br/>`)
+        } */
+
+ /* 9.3. перебрати циклом while та вивести  числа тільки з непарним індексом */
+
+        /* let i = arr.length - 1;
+           while(i >= 0) {
+               if (i % 2 !== 0) {
+                   document.write(`${arr[i]}<br/>`)
+                   console.log(arr[i])
+               }
+               i--;
+           } */
+
+ /* 9.4. перебрати циклом for та вивести  числа тільки з непарним індексом */
+
+        /* for (let i = arr.length - 1; i >= 0; i--) {
+                if (i % 2 !== 0) {
+                   console.log(arr[i])
+                   document.write(`${arr[i]}<br/>`)
+                }
+           } */
+
+ /* 9.5. перебрати циклом while та вивести  числа тільки парні  значення */
+
+        /* let i = arr.length - 1;
+           while(i >= 0) {
+               if (arr[i] % 2 == 0) {
+                   document.write(`${arr[i]}<br/>`)
+                   console.log(arr[i])
+               }
+               i--;
+           } */
+
+ /* 9.6. перебрати циклом for та вивести  числа тільки парні  значення */
+
+     /* for (let i = arr.length - 1; i >= 0; i--) {
+            if (arr[i] % 2 == 0) {
+                console.log(arr[i])
+                document.write(`${arr[i]}<br/>`)
+            }
+        } */
+
+ /* 9.7. замінити кожне число кратне 3 на слово "okten" */
+
+        /* for (let i = 0; i < arr.length; i++) {
+            if(arr[i] % 3 == 0) {
+                arr[i] = 'okten'
+            }
+        }
+        console.log(arr) */
+
+
+        /* 10 створити пустий масив та :
+       10.1 - заповнити його 50 парними числами за допомоги циклу. */
+
+     /*  let emptyArr = [];
+         for (let i = 0, j = 0; i <= 50; i++, j = j + 2) {
+              emptyArr[i] = j;
+          }
+         document.write(emptyArr) */
+
+    /* 10.2  - заповнити його 50 непарними числами за допомоги циклу. */
+
+             /* for (let i = 0, j = 1; i <= 50; i++, j = j + 2) {
+                    emptyArr[i] = j
+                }
+                document.write(emptyArr)  */
+
+      /*  1. Створити пустий масив та :
+               a. заповнити його 50 парними числами за допомоги циклу. */
+
+        /*  let emptyArr = []
+            for (let i = 0, j = 0; i <= 50; i++, j = j + 2) {
+               emptyArr[i] = j;
+            }
+            document.write(emptyArr) */
+
+              /* b. заповнити його 50 непарними числами за допомоги циклу. */
+
+         /* let emptyArr = []
+            for (let i = 0, j = 1; i <= 50; i++, j = j + 2) {
+                emptyArr[i] = j;
+            }
+            document.write(emptyArr)  */
+
+             /*  c. Заповнити масив 20ма рандомними числами. (Google: Generate random number JS) */
+
+      /*let numReserve = [];
+        while (numReserve.length < 20) {
+        let randomNumber = Math.ceil(Math.random() * 1000);
+        let found = false;
+        for (let i = 0; i < numReserve.length; i++) {
+            if (numReserve[i] === randomNumber){
+               found = true;
+               break;
+            }
+        }
+        if (!found) {
+              numReserve[numReserve.length] = randomNumber;
+        }
+        console.log(numReserve); */
+
+
+             /*  d. Заповнити масив 20ма рандомними чисалами в діапазоні від 8 до 732 (Google: Generate random number JS) */
+
+         /* let randomArr = [];
+            for (let i = 0; i < 20; i++) {
+               let checkNum = Math.floor(Math.random() * (732 - 8 + 1) ) + 8
+               randomArr[i] = checkNum
+            }
+            console.log(randomArr); */
+
+         /* 2. Вивести за допомогою console.log кожен третій елемент */
+
+        /* let randomArr = [];
+         let tripleArr = [];
+          for (let i = 0; i < 20; i++) {
+              let checkNum = Math.floor(Math.random() * (732 - 8 + 1) ) + 8
+              randomArr[i] = checkNum
+          }
+        for (let i = 0, j = 0; j < 20; i++, j += 3) {
+            tripleArr[i] = randomArr[j]
+        }
+
+        console.log(tripleArr) */
+
+         /* 3. Вивести за допомогою console.log кожен третій елемен тільки якщо цей елемент є парним. */
+
+        /* let randomArr = [];
+        let tripleArr = [];
+        for (let i = 0; i < 20; i++) {
+            let checkNum = Math.floor(Math.random() * (732 - 8 + 1) ) + 8
+            randomArr[i] = checkNum
+        }
+        for (let i = 0, j = 0; j < 20; i++, j += 3) {
+            tripleArr[i] = randomArr[j]
+        }
+
+        let filteredArr = tripleArr.filter(elem => elem % 2 == 0)
+        console.log(randomArr)
+        console.log(tripleArr)
+        console.log(filteredArr) */
+
+         /* 4. Вивести за допомогою console.log кожен третій елемен тільки якщо цей елемент є парним та записати їх в новий масив */
+
+                /* let randomArr = [];
+                let tripleArr = [];
+                for (let i = 0; i < 20; i++) {
+                    let checkNum = Math.floor(Math.random() * (732 - 8 + 1) ) + 8
+                    randomArr[i] = checkNum
+                }
+                for (let i = 0, j = 0; j < 20; i++, j += 3) {
+                    tripleArr[i] = randomArr[j]
+                }
+
+                let filteredArr = tripleArr.filter(elem => elem % 2 == 0)
+                console.log(randomArr)
+                console.log(tripleArr)
+                console.log(filteredArr) */
+
+
+         /* 5. Вивести кожен елемент масиву, сусід справа якого є парним
+          EXAMPLE: [ 1, 2, 3, 5, 7, 9, 56, 8, 67 ] -> Має бути виведено 1, 9, 56 */
+
+            /* let anyArr = [ 1, 2, 3, 5, 7, 9, 56, 8, 67 ];
+               let filteredArr = [];
+               for (let i = 0; i < anyArr.length; i++) {
+                   if (anyArr[i + 1] % 2 == 0) {
+                       filteredArr.push(anyArr[i]);
+                   }
+               }
+               console.log(filteredArr); */
+
+
+         /* 6. Є масив з числами [100,250,50,168,120,345,188], Які характеризують вартість окремої покупки. Обрахувати середній чек. */
+
+         /*    let prices = [100,250,50,168,120,345,188]
+               function average(arr) {
+                  let averPrice = 0;
+                  let sum = 0;
+                  for (let i = 0; i < arr.length; i++) {
+                     sum += parseInt(arr[i])
+                  }
+                  averPrice = sum / arr.length;
+                  return Math.round(averPrice);
+               }
+               console.log(average(prices)) */
+
+         /* 7. Створити масив з рандомними значеннями, помножити всі його елементи на 5 та перемістити їх в інший масив. */
+
+        /* let randomNums = [];
+        let multiplyNums = [];
+        for (let i = 1; i < 20; i++) {
+           let randNum = Math.floor(Math.random() * (732 - 8 + 1) ) + 8;
+            randomNums[i] = randNum;
+            multiplyNums[i] = randomNums[i] * 5;
+           }
+
+        console.log(randomNums);
+        console.log(multiplyNums); */
+
+         /* 8. Створити масив з будь якими значеннями (стрінги, числа, і тд...). пройтись по ньому, і якщо елемент є числом - додати його в інший масив. */
+
+            /* let mixArr = ['Mixed', 125, false, 352, null, undefined, {id: '1s', size: 13}, 16];
+               let numsArr =  [];
+               for (let elem of mixArr) {
+                     if (typeof(elem) == 'number') {
+                        numsArr.push(elem);
+                     }
+               } */
+
+        /* let numsArr = mixArr.filter(elem => typeof(elem) == 'number');
+
+        console.log(numsArr); */
+
+
+
+    /* З'єднати в один об'єкт користувача та місто з відповідними "id" та "user_id" .
+    Записати цей об'єкт в новий масив
+    Example:
+    let usersWithCities = [
+        {
+            id: 1, // <===
+            name: 'vasya',
+            age: 31,
+            status: false,
+            address: {
+                user_id: 1, // <===
+                country: 'Ukraine',
+                city: 'Ternopil'
+            }
+        },
+        // TO BE CONTINUED .....
+    ]
+        */
+
+  /* let usersWithId = [
+    {id: 1, name: 'vasya', age: 31, status: false},
+    {id: 2, name: 'petya', age: 30, status: true},
+    {id: 3, name: 'kolya', age: 29, status: true},
+    {id: 4, name: 'olya', age: 28, status: false}
+   ];
+
+   let citiesWithId = [
+    {user_id: 3, country: 'USA', city: 'Portland'},
+    {user_id: 1, country: 'Ukraine', city: 'Ternopil'},
+    {user_id: 2, country: 'Poland', city: 'Krakow'},
+    {user_id: 4, country: 'USA', city: 'Miami'}
+   ];
+
+let usersWithCities = []
+for (let i = 0; i < usersWithId.length; i++ ){
+    usersWithCities[i] = usersWithId[i]
+    for (let j = 0; j < citiesWithId.length; j++) {
+        if (usersWithId[i].id == citiesWithId[j].user_id) {
+            usersWithCities[i].address = citiesWithId[j]
+        }
+    }
+}
+        console.log(usersWithCities); */
+    </script>
+
+</body>
+</html>
