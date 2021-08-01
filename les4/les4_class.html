@@ -10,30 +10,182 @@
     створити пустий масив, наповнити його 10 об'єктами Client
     Взяти масив (Client []).Відсортувати його по кількості товарів в полі order по зростанню. (sort) */
 
+   class Client {
+       constructor(id, name, surname, email, phone, order) {
+           this.id = id
+           this.name = name
+           this.surname = surname
+           this.email = email
+           this.phone = phone
+           this.order = [order]
+       }
+   }
+
+   let client = [
+       new Client(1, 'Sindy', 'Krauwfort', 'actorstar@gmail.com', 13515556, ['carrot', 'onion', 'cabbage' ]),
+       new Client(2, 'Elvis', 'Presley', 'elvisforever@gmail.com', 135354, ['pear', 'bananas', 'apple', 'potatoes']),
+       new Client(3, 'Anthony', 'Snowden', 'cheeter2012@gmail.com', 1487156, ['onion', 'cabbage', 'parsley', 'apple', 'potatoes']),
+       new Client(4, 'Glenn', 'Miller', 'musicthebest@gmail.com', 1485556, ['carrot', 'onion', 'cabbage', 'apple', 'potatoes']),
+       new Client(5, 'Michael', 'Schoor', 'youtube182012@gmail.com', 1437156, [ 'cabbage', 'parsley', 'pear', 'bananas', 'apple', 'potatoes']),
+       new Client(6, 'Nobody', 'Knows', 'somewere31@gmail.com', 14311116, ['bananas', 'apple']),
+       new Client(7, 'Kyrylo', 'Mokrich', 'rieltorthebest31@gmail.com', 19990176, ['parsley']),
+       new Client(8, 'Stepan', 'Bandera', 'coolguy@gmail.com', 366778176, ['carrot', 'onion', 'cabbage', 'apple', 'potatoes', 'pear', 'bananas']),
+       new Client(9, 'Franz', 'Kafka', 'darkmatter@gmail.com', 666642176, ['onion', 'cabbage']),
+       new Client(10, 'Serhiy', 'Hryshevskiy', 'founderukr@gmail.com', 33332176, ['apple']),
+   ]
+
+   let result = client.sort((a, b) => a.order[0].length - b.order[0].length)
+   console.log(result)
+
+    /* Черновики!!!
+    console.log(client[1].order[0].length)
+   let rangePurchaseToUpper = client[1]
+   console.log(rangePurchaseToUpper)
+
+    for (let i = 0; i < client[i].order[0].length; i++) {
+       if ((client[i].order[0].length) > (client[i + 1].order[0].length)) {
+           let prom = client[i].order[0]
+               client[i].order[0] = client[i + 1].order[0]
+           client[i + 1].order[0] = prom
+       }
+   }
+    console.log(client)
+
+       /*client.filter((elem) => {
+       if (typeof elem == 'object') {
+          return elem.sort((a, b) => a.length - b.length)
+       }
+   }) */
 
 
-  /*  - Створити функцію конструктор яка дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
+
+  /*  - Створити функцію конструктор яка дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску,
+  максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
     -- drive () - яка виводить в консоль "їдемо зі швидкістю {максимальна швидкість} на годину"
     -- info () - яка виводить всю інформацію про автомобіль
     -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
     -- changeYear (newValue) - змінює рік випуску на значення newValue
     -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car */
+
+   function Car(model, producer, year, maxSpeed, capacityEngine, drive, info, increaseMaxSpeed, changeYear, addDriver) {
+       this.model = model
+       this.producer = producer
+       this.year = year
+       this.maxSpeed = maxSpeed
+       this.capacityEngine = capacityEngine
+       this.driveConsol = drive
+       this.info = info
+       this.increasedMaxSpeed = increaseMaxSpeed
+       this.changeYear = changeYear
+       this.addDriver = addDriver
+   }
+
+   /* let  drive = () => {
+       console.log(`їдемо зі швидкістю ${this.maxSpeed} км на годину`)
+   }
+   let info = () => {
+       document.write(`${this}`)
+   }
+   let increasedMaxSpeed = (newSpeed) => {
+       console.log(this.maxSpeed + newSpeed)
+   }
+   let changeYear = (newValue) => {
+       console.log(this.year = newValue)
+   }
+   let addDriver*/
+
+   /*drive: function () {console.log(`їдемо зі швидкістю ${this.maxSpeed} км на годину`)},
+           info: () => { console.log(`${cars}`) },
+           increaseMaxSpeed: (newSpeed) => { console.log(this.maxSpeed + newSpeed)},
+           changeYear: (newValue) => {console.log(this.year = newValue)},*/
+
+   let cars = [
+       new Car('Fabia',
+           'Czech Republic',
+           2015,
+           160,
+           1.4,
+
+       )
+   ]
+   console.log(cars)
 
 
   /*  - (Те саме, тільки через клас)
-    Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
+    Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна
+    швидкість, об'єм двигуна. додати в об'єкт функції:
     -- drive () - яка виводить в консоль "їдемо зі швидкістю {максимальна швидкість} на годину"
     -- info () - яка виводить всю інформацію про автомобіль
     -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
     -- changeYear (newValue) - змінює рік випуску на значення newValue
     -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car */
+    class Car1 {
+        constructor(model, producer, year, maxSpeed, capacityEngine, drive, info, increaseMaxSpeed, changeYear, addDriver) {
+            this.model = model
+            this.producer = producer
+            this.year = year
+            this.maxSpeed = maxSpeed
+            this.capacityEngine = capacityEngine
+            this.driveConsol = drive
+            this.info = info
+            this.increasedMaxSpeed = increaseMaxSpeed
+            this.changeYear = changeYear
+            this.addDriver = addDriver
+        }
+    }
 
+    let cars1 = new Car1(
+        'Octavia', 'Skoda', 2009, 185, 1.6,
+    )
+   console.log(cars1)
 
 
    /* -створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити 10 попелюшок , покласти їх в масив.
     Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
         За допомоги циклу знайти яка попелюшка повинна бути з принцом.
         Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку */
+    class Cinderella {
+        constructor(name, age, footSize) {
+            this.name = name
+            this.age = age
+            this.footSize = footSize
+        }
+    }
+
+    let cinderellas = [
+        new Cinderella('Vera', 48, 44),
+        new Cinderella('Katia', 43, 36),
+        new Cinderella('Nastya', 29, 37),
+        new Cinderella('Olena', 19, 39),
+        new Cinderella('Eliza', 22, 36),
+        new Cinderella('Vasilisa', 34, 40),
+        new Cinderella('Katia', 20, 38),
+        new Cinderella('Inna', 24, 44),
+        new Cinderella('Ivana', 20, 33),
+        new Cinderella('Sophia', 18, 35),
+    ]
+   console.log(cinderellas)
+
+   class Prinсe {
+       constructor(name, age, footSize) {
+           this.name = name
+           this.age = age
+           this.footSize = footSize
+       }
+   }
+
+   let prince1 = ['Ivan', 20, 33]
+   console.log(prince1[1])
+
+   for (const girl of cinderellas) {
+       if (girl['age'] == prince1[1]) {
+           console.log(girl)
+       }
+   }
+   let conjunction = cinderellas.filter((elem) => elem.age == 20 && elem.footSize == 33)
+   console.log(conjunction)
+
 </script>
 </body>
 </html>
+
