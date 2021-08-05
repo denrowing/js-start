@@ -34,20 +34,19 @@
     }
     } */
 
-   function User(id, name, username, email, address, street, suite, city, zipcode, geo, lat, lng, phone, website,
-                 company, name2, catchPhrase, bs) {
+   function User(id, name, username, email, street, suite, city, zipcode, lat, lng, phone, website, name2, catchPhrase, bs) {
        this.id = id
        this.name = name
        this.username = username
        this.email = email
        this.address = {}
-       this.address.steet = street
-       this.address.suite = suite
-       this.address.city = city
-       this.address.zipcode = zipcode
-       this.address.geo = {}
-       this.address.geo.lat = lat
-       this.address.geo.lng = lng
+           this.address.steet = street
+           this.address.suite = suite
+           this.address.city = city
+           this.address.zipcode = zipcode
+           this.address.geo = {}
+               this.address.geo.lat = lat
+               this.address.geo.lng = lng
        this.phone = phone
        this.website = website
        this.company = {}
@@ -90,6 +89,10 @@
        {titleOfAttr: 'accesskey', actionOfAttr: 'Переход к области с помощью комбинации клавиш'},
        {/some props and values/},
    ]}  */
+
+   function Tags (title, cover, attributes, titleOfAttr, actionOfAttr) {
+
+   }
 
 </script>
 </body>

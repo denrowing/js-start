@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+</head>
+<body>
+
+<button id="getButton" value="GET">GET</button>
+
+
+<script>
+    // document.body.appendChild(cashStore)
+    // let button3 = document.getElementById('buttonDelete')
+    // <button id="buttonDelete" value="DELETE">DELETE</button>
+
+    let getButton = document.getElementById('getButton')
+
+
+    getButton.onclick = () => {
+        let dataStore = `${localStorage.getItem('info')}`
+        if (!dataStore) {
+            return
+        }
+
+            let data = JSON.parse(dataStore)
+            for (const datum of data) {
+                let cashStore = document.createElement('div')
+                let button = document.createElement('button')
+                button.innerHTML = 'DELETE'
+                button.onclick = (ev) => {
+                    let divRemove = ev.path[1]
+                    let id = cashStore.innerText.split(')')[0]
+
+                    let indexToRemove = data.findIndex((item) => +datum.id === +id)
+                    // console.log(id)
+                    data.splice(indexToRemove, 1)
+                    localStorage.setItem('info', JSON.stringify(data))
+                    divRemove.innerHTML = ''
+                }
+                cashStore.innerText = `${datum.id}); name: ${datum.item}; price: ${datum.price}; quantity: ${datum.quantity}`
+                cashStore.appendChild(button)
+
+                document.body.appendChild(cashStore)
+            }
+
+    }
+
+    // button3.onclick = (ev) => {
+    //     cashStore.innerHTML = ''
+    //     localStorage.removeItem('info')
+    // }
+</script>
+</body>
+</html>
