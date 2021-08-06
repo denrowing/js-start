@@ -32,7 +32,7 @@
                     let divRemove = ev.path[1]
                     let id = cashStore.innerText.split(')')[0]
 
-                    let indexToRemove = data.findIndex((item) => +datum.id === +id)
+                    let indexToRemove = data.findIndex((datum) => +datum.id === +id)
                     // console.log(id)
                     data.splice(indexToRemove, 1)
                     localStorage.setItem('info', JSON.stringify(data))
