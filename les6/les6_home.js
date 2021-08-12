@@ -79,10 +79,18 @@ console.log(ascendingAge);
 
 // c) пройтись по ньому та додати кожному юзеру поле id - яке характеризує унікальний індентифікатор (По якому принципу його створювати - ваше рішення),
 // та зберегти це в новий масив (первинний масив залишиться без змін)
-let addId = users.map((elem, index) =>  index + 1)
-        // elem.indexOf(elem + 1)
+let a = JSON.stringify(users)
+let userCopy = JSON.parse(a)
+
+console.log(userCopy);
+let addId = userCopy.map((elem, index) =>  elem.id = index + 1)
 console.log(addId);
-console.log(users);
+
+// for (const user of usersCopy) {
+//     let i = 1
+//     user.id = i++
+// }
+
 
 // d) відсортувати його за індентифікатором
 

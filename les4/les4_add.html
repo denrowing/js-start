@@ -61,7 +61,6 @@
    console.log(user1)
 
 
-
    /* -  Створити функцію конструктор / клас  який описує об'єкт тегу
    Поля :
        -назва тегу ()
@@ -90,9 +89,72 @@
        {/some props and values/},
    ]}  */
 
-   function Tags (title, cover, attributes, titleOfAttr, actionOfAttr) {
 
+
+   class Tags {
+       construction (titleOfTag, action, titleOfAttr1, actionOfAttr1, titleOfAttr2, actionOfAttr2, titleOfAttr3, actionOfAttr3) {
+           this.titleOfTag = titleOfTag
+           this.action = action
+           this.attrs = []
+           this.attrs.first = {}
+           this.attrs.first.titleOfAttr1 = titleOfAttr1
+           this.attrs.first.actionOfAttr1 = actionOfAttr1
+           this.attrs.second = {}
+           this.attrs.second.titleOfAttr2 = titleOfAttr2
+           this.attrs.second.actionOfAttr2 = actionOfAttr2
+           this.attrs.third = {}
+           this.attrs.third.titleOfAttr3 = titleOfAttr3
+           this.attrs.third.actionOfAttr3 = actionOfAttr3
+       }
    }
+   let tag = [
+       new Tags('a', 'предназначен для создания ссылок',
+           'download', 'Предлагает скачать указанный по ссылке файл.',
+           'name', 'Устанавливает имя якоря внутри документа.', 'target', 'Имя окна или фрейма, куда браузер будет загружать документ.'),
+       new Tags('div', 'блочный элементом для выделения фрагмента документа с целью изменения вида содержимого',
+           'align', 'Задает выравнивание содержимого тега', 'title', 'Добавляет всплывающую подсказку к содержимому'),
+   ]
+   console.log(tag);
+
+   // class Tags {
+   //      construction (title, cover, titleOfAttr1, actionOfAttr1, titleOfAttr2, actionOfAttr2, titleOfAttr3, actionOfAttr3) {
+   //          this.title = title
+   //          this.cover = cover
+   //          this.attrs = []
+   //          this.attrs.first = {}
+   //          this.attrs.first.titleOfAttr = titleOfAttr1
+   //          this.attrs.first.actionOfAttr = actionOfAttr1
+   //          this.attrs.second = {}
+   //          this.attrs.second.titleOfAttr = titleOfAttr2
+   //          this.attrs.second.actionOfAttr = actionOfAttr2
+   //          this.attrs.third = {}
+   //          this.attrs.third.titleOfAttr = titleOfAttr3
+   //          this.attrs.third.actionOfAttr = actionOfAttr3
+   //      }
+   // }
+   // let tag = [
+   //     new Tags('a', 'предназначен для создания ссылок', 'download', 'Предлагает скачать указанный по ссылке файл.',
+   //         'name', 'Устанавливает имя якоря внутри документа.', 'target', 'Имя окна или фрейма, куда браузер будет загружать документ.'),
+   //     new Tags('div', 'блочный элементом для выделения фрагмента документа с целью изменения вида содержимого',
+   //         'align', 'Задает выравнивание содержимого тега', 'title', 'Добавляет всплывающую подсказку к содержимому'),
+   //     new Tags('h1', 'наиболее важный заголовок первого уровня', 'align', 'Задает выравнивание содержимого тега',
+   //         'title', 'Описывает содержимое элемента в виде всплывающей подсказки.'),
+   //     new Tags('span', 'определяет строчные элементы документа', 'class', 'Определяет имя класса, которое позволяет ' +
+   //         'связать тег со стилевым оформлением.', 'contextmenu', 'Устанавливает контекстное меню для элемента.'),
+   //     new Tags('input', 'создает разные элементы интерфейса и обеспечивает взаимодействие с пользователем',
+   //         'checked', 'Предварительно активированный переключатель или флажок.', 'disabled',
+   //         'Блокирует доступ и изменение элемента.', 'list', 'Указывает на список вариантов, которые можно выбирать ' +
+   //         'при вводе текста.'),
+   //     new Tags('form', 'предназначена для обмена данными между пользователем и сервером.',
+   //         'autocomplete', 'Включает автозаполнение полей формы.', 'target', 'Имя окна или фрейма, куда обработчик будет ' +
+   //         'загружать возвращаемый результат.'),
+   //     new Tags('option', 'определяет отдельные пункты списка, создаваемого с помощью контейнера select',
+   //         'label', 'Указание метки пункта списка.', 'value', 'Значение пункта списка, которое будет отправлено на сервер ' +
+   //         'или прочитано с помощью скриптов.', 'selected', 'Заранее устанавливает определенный пункт списка выделенным.'),
+   //     new Tags('select', 'создает элемент интерфейса в виде раскрывающегося списка', 'multiple', 'Позволяет одновременно ' +
+   //         'выбирать сразу несколько элементов списка.', 'required', 'Список обязателен для выбора перед отправкой формы.'),
+   // ]
+   // console.log(tag);
 
 </script>
 </body>
