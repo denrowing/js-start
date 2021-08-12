@@ -4,6 +4,7 @@ let arr = [40, -10, 3, 8, -5, 0, 107, 44, 67, 17,  -20, 11, 88, 31, 32, 50, 49, 
 let sortFromLess = arr.sort((a,b) => a - b)
 console.log(sortFromLess);
 
+
 //     b) відсортувати його від більшого до меншого.
 let sortFromMore = arr.sort((a,b) => b - a)
 console.log(sortFromMore);

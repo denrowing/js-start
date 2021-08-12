@@ -19,6 +19,7 @@ const cars = [
 let engineVolumeThree = cars.filter(elem => elem.volume > 3)
 console.log(engineVolumeThree);
 
+
 // - двигун = 2л
 let engineVolumeTwo = cars.filter(elem => elem.volume >2)
 console.log(engineVolumeTwo);
